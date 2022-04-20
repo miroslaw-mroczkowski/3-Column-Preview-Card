@@ -17,3 +17,19 @@ $bg-color: hsl(0, 0%, 95%);
 :root {
 	font-size: 62.5%;
 }
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 1rem;
+}
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
