@@ -138,3 +138,21 @@ body {
 	}
 }
 
+@media (min-width: 400px) {
+	.cards {
+		max-width: 350px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.cards {
+		grid-template-columns: repeat(3, 1fr);
+		align-content: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 900px;
+	}
+	.attribution {
+		font-size: 1.4rem;
+	}
+}
