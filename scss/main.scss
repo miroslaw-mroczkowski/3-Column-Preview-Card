@@ -5,8 +5,8 @@ $card-first: hsl(31, 77%, 52%);
 $card-second: hsl(184, 100%, 22%);
 $card-third: hsl(179, 100%, 13%);
 
-$main-color: hsla(0, 0%, 100%, 0.75);
-$bg-color: hsl(0, 0%, 95%);
+$main-gray: hsla(0, 0%, 100%, 0.75);
+$main-white: hsl(0, 0%, 95%);
 
 * {
 	box-sizing: border-box;
@@ -19,17 +19,122 @@ $bg-color: hsl(0, 0%, 95%);
 }
 
 body {
+	position: relative;
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 2rem 1rem;
+	padding: 4rem 3rem;
 }
 
 .cards {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
 	width: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+
+	.card {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2.6rem;
+		padding: 4rem;
+
+		&__icon {
+			height: 3.6rem;
+		}
+
+		&__title {
+			font-size: 3.2rem;
+			font-family: $secondary-font;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			color: $main-white;
+		}
+
+		&__text {
+			font-size: 1.5rem;
+			line-height: 1.5;
+			font-family: $primary-font;
+			color: $main-gray;
+		}
+
+		&__btn {
+			align-self: center;
+			justify-self: start;
+			padding: 1.3rem 3.2rem;
+			font-size: 1.5rem;
+			border: 2px solid $main-white;
+			border-radius: 2.6rem;
+			background-color: $main-white;
+			font-family: $primary-font;
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
+		}
+	}
+	.card--one {
+		background-color: $card-first;
+		.card__btn {
+			color: $card-first;
+
+			&:hover,
+			&:focus {
+				background-color: $card-first;
+				color: $main-white;
+			}
+		}
+	}
+
+	.card--two {
+		background-color: $card-second;
+		.card__btn {
+			color: $card-second;
+
+			&:hover,
+			&:focus {
+				background-color: $card-second;
+				color: $main-white;
+			}
+		}
+	}
+
+	.card--three {
+		background-color: $card-third;
+		.card__btn {
+			color: $card-third;
+
+			&:hover,
+			&:focus {
+				background-color: $card-third;
+				color: $main-white;
+			}
+		}
+	}
 }
+
+.attribution {
+	position: absolute;
+	width: 100%;
+	bottom: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $primary-font;
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: rgb(58, 55, 55);
+
+	a {
+		color: $card-first;
+		text-decoration: none;
+		transition: color 0.3s;
+
+		&:hover {
+			color: blue;
+		}
+	}
+}
+

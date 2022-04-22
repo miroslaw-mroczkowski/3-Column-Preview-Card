@@ -10,6 +10,7 @@
 }
 
 body {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -25,17 +26,131 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2rem 1rem;
+  padding: 4rem 3rem;
 }
 
 .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cards .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 2.6rem;
+  padding: 4rem;
+}
+
+.cards .card__icon {
+  height: 3.6rem;
+}
+
+.cards .card__title {
+  font-size: 3.2rem;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #f2f2f2;
+}
+
+.cards .card__text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cards .card__btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  padding: 1.3rem 3.2rem;
+  font-size: 1.5rem;
+  border: 2px solid #f2f2f2;
+  border-radius: 2.6rem;
+  background-color: #f2f2f2;
+  font-family: "Lexend Deca", sans-serif;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cards .card--one {
+  background-color: #e38826;
+}
+
+.cards .card--one .card__btn {
+  color: #e38826;
+}
+
+.cards .card--one .card__btn:hover, .cards .card--one .card__btn:focus {
+  background-color: #e38826;
+  color: #f2f2f2;
+}
+
+.cards .card--two {
+  background-color: #006970;
+}
+
+.cards .card--two .card__btn {
+  color: #006970;
+}
+
+.cards .card--two .card__btn:hover, .cards .card--two .card__btn:focus {
+  background-color: #006970;
+  color: #f2f2f2;
+}
+
+.cards .card--three {
+  background-color: #004241;
+}
+
+.cards .card--three .card__btn {
+  color: #004241;
+}
+
+.cards .card--three .card__btn:hover, .cards .card--three .card__btn:focus {
+  background-color: #004241;
+  color: #f2f2f2;
+}
+
+.attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #3a3737;
+}
+
+.attribution a {
+  color: #e38826;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.attribution a:hover {
+  color: blue;
 }
 /*# sourceMappingURL=main.css.map */
